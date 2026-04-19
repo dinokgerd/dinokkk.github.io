@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jadwal Pendaftaran Lengkap | SMAN 1 DINO</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#ffffff",
+                    "on-primary-container": "#9bbdff",
+                    "surface-container-highest": "#d3e4fe",
+                    "surface-bright": "#f8f9ff",
+                    "surface-container-low": "#eff4ff",
+                    "secondary-fixed": "#a9edff",
+                    "background": "#f8f9ff",
+                    "tertiary-container": "#3c4d60",
+                    "primary-fixed-dim": "#abc7ff",
+                    "on-tertiary-container": "#acbed4",
+                    "inverse-on-surface": "#eaf1ff",
+                    "tertiary": "#253648",
+                    "surface-container": "#e5eeff",
+                    "outline-variant": "#c2c6d3",
+                    "surface-container-high": "#dce9ff",
+                    "primary-fixed": "#d7e2ff",
+                    "on-secondary-fixed-variant": "#004e5b",
+                    "on-primary-fixed": "#001b3f",
+                    "surface": "#f8f9ff",
+                    "inverse-primary": "#abc7ff",
+                    "on-secondary-fixed": "#001f26",
+                    "on-background": "#0b1c30",
+                    "tertiary-fixed": "#d2e4fb",
+                    "on-tertiary-fixed-variant": "#37485b",
+                    "primary-container": "#004a99",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#255dad",
+                    "secondary-fixed-dim": "#6ad5ed",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#424751",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#b6c8df",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#0a1d2d",
+                    "on-secondary-container": "#006777",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#cbdbf5",
+                    "secondary": "#006879",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#213145",
+                    "on-surface": "#0b1c30",
+                    "on-primary-fixed-variant": "#00458f",
+                    "secondary-container": "#7ce6ff",
+                    "primary": "#00346f",
+                    "outline": "#737783",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#d3e4fe"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9ff; color: #0b1c30; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-lg dark:bg-slate-950/80 shadow-xl shadow-blue-900/5">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto w-full">
+<div class="text-xl font-black tracking-tighter text-blue-900 dark:text-white uppercase">
+                SMAN 1 DINO
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-manrope tracking-tight text-sm font-semibold uppercase text-slate-500 dark:text-slate-400 hover:text-blue-700 transition-colors" href="#">Beranda</a>
+<a class="font-manrope tracking-tight text-sm font-semibold uppercase text-slate-500 dark:text-slate-400 hover:text-blue-700 transition-colors" href="#">Profil</a>
+<a class="font-manrope tracking-tight text-sm font-semibold uppercase text-slate-500 dark:text-slate-400 hover:text-blue-700 transition-colors" href="#">Berita</a>
+<a class="font-manrope tracking-tight text-sm font-semibold uppercase text-slate-500 dark:text-slate-400 hover:text-blue-700 transition-colors" href="#">Guru</a>
+<a class="font-manrope tracking-tight text-sm font-semibold uppercase text-slate-500 dark:text-slate-400 hover:text-blue-700 transition-colors" href="#">Fasilitas</a>
+<a class="font-manrope tracking-tight text-sm font-semibold uppercase text-blue-900 dark:text-white border-b-2 border-blue-900 dark:border-blue-400 pb-1" href="#">Kegiatan</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:block relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-full text-sm focus:ring-2 focus:ring-primary-fixed-dim w-48" placeholder="Cari info..." type="text"/>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-semibold text-sm hover:opacity-90 transition-all scale-100 active:scale-95">
+                    Kontak
+                </button>
+</div>
+</div>
+</nav>
+<main class="min-h-screen">
+<!-- Hero Header -->
+<section class="relative pt-20 pb-16 px-8 max-w-7xl mx-auto overflow-hidden">
+<div class="absolute top-0 right-0 -z-10 w-1/3 h-full bg-gradient-to-l from-primary-fixed/20 to-transparent blur-3xl"></div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest uppercase mb-6">Penerimaan Siswa Baru 2024/2025</span>
+<h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-primary leading-[1.1] mb-6">
+                        Jadwal Pendaftaran Lengkap
+                    </h1>
+<p class="text-lg text-on-surface-variant leading-relaxed max-w-xl mb-8">
+                        Persiapkan diri Anda untuk bergabung dengan institusi pendidikan unggulan. Berikut adalah rincian tahapan seleksi masuk SMAN 1 DINO untuk tahun akademik mendatang.
+                    </p>
+</div>
+<div class="relative group">
+<div class="aspect-[4/3] rounded-2xl overflow-hidden bg-surface-container-high transition-transform duration-500 group-hover:scale-[1.02]">
+<img alt="Student studying" class="w-full h-full object-cover" data-alt="modern bright university campus hallway with students walking and natural light streaming through large glass windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKvs91Iyz_3li4SZZGoILu0__y4IojpbdbORWXBCQqSKWFnPAq1lbTLwR_ZuEk7Dg_7b8Uqn0uMzGkH7jl3R_80DD4Gtzz6J098UfyW2DfH91_eQPGd7gKDDFCI9aDRLAAR-JqXqBaDNQPRtKwITf-En1aGru3F3C9NehxAzOEafmFUz5n0oxXekGzXosRsGUSlHWALjo0f2FGwGiaE2LSGzrYAXV7r7Y76PDVQDE4yp8bQfsToBkyZ817oMWIJx5gMDj07Jlig96Y"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-xl shadow-xl shadow-blue-900/10 border border-white/20 backdrop-blur-sm max-w-xs">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white">event_available</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-tighter">Status</p>
+<p class="font-bold text-primary">Pendaftaran Dibuka</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Timeline Section -->
+<section class="bg-surface-container-low py-24 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div class="max-w-2xl">
+<h2 class="text-3xl font-bold text-primary mb-4">Timeline Seleksi PPDB</h2>
+<p class="text-on-surface-variant">Pastikan Anda mencatat setiap tanggal penting agar tidak terlewatkan dalam setiap tahapan seleksi administrasi dan akademik.</p>
+</div>
+<div class="flex gap-3">
+<button class="p-3 rounded-full bg-surface-container-lowest border border-outline-variant/20 hover:bg-white transition-all">
+<span class="material-symbols-outlined">download</span>
+</button>
+<button class="p-3 rounded-full bg-surface-container-lowest border border-outline-variant/20 hover:bg-white transition-all">
+<span class="material-symbols-outlined">print</span>
+</button>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Timeline Item 1 -->
+<div class="group grid grid-cols-1 md:grid-cols-[1fr_2fr_auto] items-center bg-surface-container-lowest p-8 rounded-2xl hover:shadow-lg transition-all duration-300">
+<div class="mb-4 md:mb-0">
+<p class="text-sm font-bold text-secondary uppercase tracking-widest mb-1">Tahap 1</p>
+<h3 class="text-2xl font-black text-primary">15 - 20 Mei 2024</h3>
+</div>
+<div class="border-l-0 md:border-l-2 border-primary-fixed-dim/30 md:pl-12 py-2">
+<h4 class="text-xl font-bold text-on-surface mb-2">Sosialisasi &amp; Pra-Pendaftaran</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-lg">Penyampaian informasi tata cara pendaftaran, pembuatan akun, dan verifikasi berkas awal secara daring melalui portal resmi.</p>
+</div>
+<div class="hidden md:block">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors text-3xl">info</span>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="group grid grid-cols-1 md:grid-cols-[1fr_2fr_auto] items-center bg-surface-container-lowest p-8 rounded-2xl hover:shadow-lg transition-all duration-300">
+<div class="mb-4 md:mb-0">
+<p class="text-sm font-bold text-secondary uppercase tracking-widest mb-1">Tahap 2</p>
+<h3 class="text-2xl font-black text-primary">01 - 10 Juni 2024</h3>
+</div>
+<div class="border-l-0 md:border-l-2 border-primary-fixed-dim/30 md:pl-12 py-2">
+<h4 class="text-xl font-bold text-on-surface mb-2">Pendaftaran Jalur Afirmasi &amp; Prestasi</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-lg">Pembukaan pendaftaran khusus untuk calon siswa melalui jalur prestasi akademik/non-akademik dan jalur afirmasi keluarga ekonomi tidak mampu.</p>
+</div>
+<div class="hidden md:block">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors text-3xl">star</span>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="group grid grid-cols-1 md:grid-cols-[1fr_2fr_auto] items-center bg-surface-container-lowest p-8 rounded-2xl border-2 border-primary/10 shadow-xl shadow-blue-900/5 transition-all duration-300">
+<div class="mb-4 md:mb-0">
+<p class="text-sm font-bold text-primary uppercase tracking-widest mb-1 italic">Tahap Utama</p>
+<h3 class="text-2xl font-black text-primary">15 - 25 Juni 2024</h3>
+</div>
+<div class="border-l-0 md:border-l-2 border-primary/20 md:pl-12 py-2">
+<div class="flex items-center gap-2 mb-2">
+<h4 class="text-xl font-bold text-on-surface">Pendaftaran Jalur Zonasi</h4>
+<span class="bg-primary-container text-white text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Terbaru</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-lg">Pendaftaran serentak berbasis jarak tempat tinggal ke sekolah. Verifikasi dokumen kependudukan dilakukan secara ketat.</p>
+</div>
+<div class="hidden md:block">
+<span class="material-symbols-outlined text-primary text-3xl" data-weight="fill">location_on</span>
+</div>
+</div>
+<!-- Timeline Item 4 -->
+<div class="group grid grid-cols-1 md:grid-cols-[1fr_2fr_auto] items-center bg-surface-container-lowest p-8 rounded-2xl hover:shadow-lg transition-all duration-300">
+<div class="mb-4 md:mb-0">
+<p class="text-sm font-bold text-secondary uppercase tracking-widest mb-1">Tahap Akhir</p>
+<h3 class="text-2xl font-black text-primary">05 Juli 2024</h3>
+</div>
+<div class="border-l-0 md:border-l-2 border-primary-fixed-dim/30 md:pl-12 py-2">
+<h4 class="text-xl font-bold text-on-surface mb-2">Pengumuman &amp; Daftar Ulang</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-lg">Pengumuman hasil seleksi akhir di portal PPDB dan proses registrasi fisik bagi calon siswa yang dinyatakan diterima.</p>
+</div>
+<div class="hidden md:block">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors text-3xl">verified</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Requirements Grid -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<h2 class="text-3xl font-bold text-primary mb-12 text-center">Dokumen Yang Diperlukan</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest p-10 rounded-2xl border border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">description</span>
+<h3 class="text-xl font-bold text-primary mb-4">Administrasi Dasar</h3>
+<ul class="space-y-3 text-on-surface-variant text-sm leading-relaxed">
+<li class="flex gap-3 items-start"><span class="material-symbols-outlined text-xs mt-1 text-primary">check_circle</span> Ijazah/SKL SMP Asli</li>
+<li class="flex gap-3 items-start"><span class="material-symbols-outlined text-xs mt-1 text-primary">check_circle</span> Akta Kelahiran</li>
+<li class="flex gap-3 items-start"><span class="material-symbols-outlined text-xs mt-1 text-primary">check_circle</span> Kartu Keluarga (Min. 1 Tahun)</li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-2xl border border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">workspace_premium</span>
+<h3 class="text-xl font-bold text-primary mb-4">Dokumen Pendukung</h3>
+<ul class="space-y-3 text-on-surface-variant text-sm leading-relaxed">
+<li class="flex gap-3 items-start"><span class="material-symbols-outlined text-xs mt-1 text-primary">check_circle</span> Sertifikat Prestasi (Jika ada)</li>
+<li class="flex gap-3 items-start"><span class="material-symbols-outlined text-xs mt-1 text-primary">check_circle</span> KIP/PKH (Jalur Afirmasi)</li>
+<li class="flex gap-3 items-start"><span class="material-symbols-outlined text-xs mt-1 text-primary">check_circle</span> Surat Pindah Tugas Orang Tua</li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-2xl border border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">photo_camera</span>
+<h3 class="text-xl font-bold text-primary mb-4">Format Digital</h3>
+<ul class="space-y-3 text-on-surface-variant text-sm leading-relaxed">
+<li class="flex gap-3 items-start"><span class="material-symbols-outlined text-xs mt-1 text-primary">check_circle</span> Pas Foto 3x4 (Background Merah)</li>
+<li class="flex gap-3 items-start"><span class="material-symbols-outlined text-xs mt-1 text-primary">check_circle</span> Scan Dokumen Asli (PDF/JPG)</li>
+<li class="flex gap-3 items-start"><span class="material-symbols-outlined text-xs mt-1 text-primary">check_circle</span> Ukuran file maks. 1MB</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mb-24 px-8 max-w-7xl mx-auto">
+<div class="bg-primary rounded-[2rem] p-12 md:p-20 relative overflow-hidden text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="relative z-10 max-w-xl">
+<h2 class="text-4xl md:text-5xl font-black text-white mb-6">Siap Melangkah Ke Masa Depan?</h2>
+<p class="text-primary-fixed-dim text-lg mb-8">Pendaftaran dilakukan sepenuhnya secara online. Pastikan koneksi internet stabil saat melakukan pengisian data.</p>
+<div class="flex flex-wrap gap-4 justify-center md:justify-start">
+<button class="bg-white text-primary px-8 py-4 rounded-xl font-bold hover:bg-primary-fixed transition-colors">Daftar Sekarang</button>
+<button class="bg-primary-container text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-800 border border-white/10 transition-colors">Unduh Panduan (PDF)</button>
+</div>
+</div>
+<div class="relative z-10 w-48 h-48 md:w-64 md:h-64 rounded-full border-8 border-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-7xl md:text-9xl opacity-20">school</span>
+</div>
+<!-- Abstract blobs for texture -->
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-blue-400 opacity-20 blur-3xl rounded-full"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-800 opacity-40 blur-3xl rounded-full"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-900">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-manrope font-bold text-lg text-blue-900 dark:text-white mb-6 uppercase tracking-tighter">SMAN 1 DINO</div>
+<p class="text-slate-600 dark:text-slate-400 font-inter text-sm leading-relaxed mb-6">
+                    Mewujudkan generasi cerdas, berkarakter, dan kompetitif di era global melalui pendidikan berkualitas tinggi yang berbasis nilai-nilai integritas.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">camera_alt</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">play_circle</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-primary dark:text-blue-300 mb-6 uppercase tracking-widest text-xs">Informasi Sekolah</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:underline underline-offset-4 transition-all text-sm" href="#">Alumni</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:underline underline-offset-4 transition-all text-sm" href="#">Kurikulum</a></li>
+<li><a class="text-blue-800 dark:text-blue-200 font-semibold hover:underline underline-offset-4 transition-all text-sm" href="#">Penerimaan</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:underline underline-offset-4 transition-all text-sm" href="#">E-Learning</a></li>
+<li><a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:underline underline-offset-4 transition-all text-sm" href="#">Perpustakaan</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-primary dark:text-blue-300 mb-6 uppercase tracking-widest text-xs">Kontak</h4>
+<div class="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+<p class="flex gap-3"><span class="material-symbols-outlined text-primary text-lg">location_on</span> Jl. Pendidikan No. 123, Dino Center</p>
+<p class="flex gap-3"><span class="material-symbols-outlined text-primary text-lg">call</span> (021) 555-0123</p>
+<p class="flex gap-3"><span class="material-symbols-outlined text-primary text-lg">mail</span> info@sman1dino.sch.id</p>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-primary dark:text-blue-300 mb-6 uppercase tracking-widest text-xs">Newsletter</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Dapatkan info pendaftaran dan kegiatan sekolah terbaru langsung ke email Anda.</p>
+<div class="flex gap-2">
+<input class="bg-white dark:bg-slate-900 border-none rounded-lg text-sm flex-grow focus:ring-2 focus:ring-primary" placeholder="Email Anda" type="email"/>
+<button class="bg-primary text-white p-2 rounded-lg"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-8 border-t border-slate-200 dark:border-slate-900 text-center">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-inter leading-relaxed">
+                © 2024 SMAN 1 DINO. Developed with Institutional Editorial standards.
+            </p>
+</div>
+</footer>
+</body></html>
