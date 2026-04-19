@@ -1,78 +1,277 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Syaidin Aldino</title>
-  <link rel="stylesheet" href="dinok.css">
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SMAN 1 DINO - Beranda</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#b6c8df",
+                    "surface-container": "#e5eeff",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#d3e4fe",
+                    "secondary-fixed-dim": "#6ad5ed",
+                    "on-primary-fixed-variant": "#00458f",
+                    "on-surface": "#0b1c30",
+                    "on-secondary-fixed-variant": "#004e5b",
+                    "on-background": "#0b1c30",
+                    "on-primary-container": "#9bbdff",
+                    "surface": "#f8f9ff",
+                    "on-primary-fixed": "#001b3f",
+                    "surface-container-high": "#dce9ff",
+                    "primary-container": "#004a99",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#eff4ff",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#acbed4",
+                    "on-surface-variant": "#424751",
+                    "outline-variant": "#c2c6d3",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#006777",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#255dad",
+                    "secondary-container": "#7ce6ff",
+                    "on-secondary-fixed": "#001f26",
+                    "primary": "#00346f",
+                    "inverse-surface": "#213145",
+                    "surface-variant": "#d3e4fe",
+                    "secondary": "#006879",
+                    "on-tertiary-fixed": "#0a1d2d",
+                    "primary-fixed-dim": "#abc7ff",
+                    "primary-fixed": "#d7e2ff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "tertiary": "#253648",
+                    "error-container": "#ffdad6",
+                    "inverse-primary": "#abc7ff",
+                    "outline": "#737783",
+                    "on-tertiary-fixed-variant": "#37485b",
+                    "surface-dim": "#cbdbf5",
+                    "surface-bright": "#f8f9ff",
+                    "tertiary-container": "#3c4d60",
+                    "secondary-fixed": "#a9edff",
+                    "background": "#f8f9ff",
+                    "tertiary-fixed": "#d2e4fb",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {},
+            "fontFamily": {
+                    "headline": [
+                            "Manrope"
+                    ],
+                    "body": [
+                            "Inter"
+                    ],
+                    "label": [
+                            "Inter"
+                    ]
+            }
+        },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Manrope', sans-serif; }
+        .glass-nav {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .text-balance {
+            text-wrap: balance;
+        }
+        .soft-shadow {
+            box-shadow: 0 12px 40px rgba(11, 28, 48, 0.06);
+        }
+    </style>
 </head>
-
-<body>
-
-<header>
-  <h1>Dino</h1>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <button id="toggle">🌙</button>
-</header>
-
-<section id="home" class="fade hero">
-  <h2 id="typing"></h2>
-  <p>Bingung juga weh</p>
-  <button onclick="klik()">Klik Aku</button>
-</section>
-
-<section id="about" class="fade">
-  <h2>About Me</h2>
-  <p>Aku Dino, suka coding dan eksplorasi ide kreatif.</p>
-
-  <div class="skills">
-    <div class="skill">
-      <p>HTML</p>
-      <div class="bar"><div class="fill" data-width="90%"></div></div>
-    </div>
-    <div class="skill">
-      <p>CSS</p>
-      <div class="bar"><div class="fill" data-width="80%"></div></div>
-    </div>
-    <div class="skill">
-      <p>JavaScript</p>
-      <div class="bar"><div class="fill" data-width="70%"></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="gallery" class="fade">
-  <h2>Gallery</h2>
-  <div class="grid">
-    <img src="assets/Snapshot_20230328_14.JPG" onclick="openModal(this)">
-    <img src="assets/Snapshot_20230328_56.JPG" onclick="openModal(this)">
-    <img src="assets/Snapshot_20230920_6.JPG" onclick="openModal(this)">
-  </div>
-</section>
-
-<div id="modal" onclick="closeModal()">
-  <img id="modal-img">
+<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 shadow-xl shadow-blue-900/5 glass-nav transition-all duration-300">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto w-full">
+<a class="text-xl font-black tracking-tighter text-primary font-headline" href="#">
+                SMAN 1 DINO
+            </a>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-headline tracking-tight text-sm font-semibold uppercase text-primary border-b-2 border-primary pb-1" href="#">Beranda</a>
+<a class="font-headline tracking-tight text-sm font-semibold uppercase text-on-surface-variant hover:text-primary hover:bg-surface-container-low px-3 py-2 rounded-lg transition-all" href="#">Profil</a>
+<a class="font-headline tracking-tight text-sm font-semibold uppercase text-on-surface-variant hover:text-primary hover:bg-surface-container-low px-3 py-2 rounded-lg transition-all" href="#">Berita</a>
+<a class="font-headline tracking-tight text-sm font-semibold uppercase text-on-surface-variant hover:text-primary hover:bg-surface-container-low px-3 py-2 rounded-lg transition-all" href="#">Guru</a>
+<a class="font-headline tracking-tight text-sm font-semibold uppercase text-on-surface-variant hover:text-primary hover:bg-surface-container-low px-3 py-2 rounded-lg transition-all" href="#">Fasilitas</a>
+<a class="font-headline tracking-tight text-sm font-semibold uppercase text-on-surface-variant hover:text-primary hover:bg-surface-container-low px-3 py-2 rounded-lg transition-all" href="#">Kegiatan</a>
+</nav>
+<div class="hidden md:flex items-center space-x-4">
+<button class="bg-primary hover:bg-primary-container text-on-primary font-body font-semibold text-sm px-6 py-2.5 rounded-lg transition-colors flex items-center gap-2">
+                    Kontak
+                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
 </div>
-
-<section id="contact" class="fade">
-  <h2>Contact</h2>
-  <form onsubmit="kirim(event)">
-    <input type="text" placeholder="Nama" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Pesan"></textarea>
-    <button type="submit">Kirim</button>
-  </form>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center justify-center overflow-hidden bg-surface-container-low">
+<div class="absolute inset-0 z-0">
+<img alt="School Campus" class="w-full h-full object-cover opacity-20" data-alt="Modern high school building exterior with large windows, bright sunny day, clear blue sky, students walking in courtyard, institutional editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzO3LNSLiuHiZN4CaiS7MlCNgsO9RfHaUv5KfIfoqy9BHc1H5ZIJXgm-ApLQJ2L4E1KmRUwm__Ld1tFp_XWf_f_h_y3VLZy2IOWvxl97B2Sq3BqrFhapRh7tbyr9kjmCL8Io8ivk1ExX8yCtfn8HCXqKkwJL3p_JkNArwfxxBnCbsQ2DFc3DkSQiY2E2ypgCLld7od1m_2rFEtaaObK8UXDYbtBlSXR_eJmaUwJMfEZriWFKadGUyQAnlQtpzx_d7PpHV6rnpZQ0jk"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/90 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full flex flex-col md:flex-row items-center gap-16 py-20">
+<div class="flex-1 max-w-2xl">
+<span class="inline-flex items-center px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-sm font-semibold font-body mb-8 tracking-wide">
+<span class="material-symbols-outlined text-[16px] mr-2">school</span>
+                        Penerimaan Siswa Baru 2024/2025
+                    </span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-on-surface leading-[1.1] tracking-[-0.02em] mb-6 text-balance">
+                        Membentuk Generasi <span class="text-primary relative inline-block">Unggul
+                            <svg class="absolute w-full h-3 -bottom-1 left-0 text-secondary opacity-50" preserveaspectratio="none" viewbox="0 0 100 10"><path d="M0 5 Q 50 10 100 5" fill="none" stroke="currentColor" stroke-width="4"></path></svg>
+</span> &amp; Berkarakter.
+                    </h1>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed mb-10 max-w-xl">
+                        SMAN 1 DINO berkomitmen memberikan pendidikan berkualitas tinggi dengan fasilitas modern dan tenaga pengajar profesional untuk mempersiapkan masa depan gemilang.
+                    </p>
+<div class="flex flex-wrap items-center gap-4">
+<a class="bg-gradient-to-r from-primary to-primary-container text-on-primary font-body font-semibold text-base px-8 py-4 rounded-lg shadow-lg shadow-primary/20 hover:scale-[0.98] transition-transform inline-block text-center" href="/panduan-pendaftaran.html">Panduan Pendaftaran Online</a>
+<a class="bg-surface-container-highest text-on-surface font-body font-semibold text-base px-8 py-4 rounded-lg hover:bg-surface-variant transition-colors flex items-center justify-center gap-2" href="/jadwal-pendaftaran.html">Jadwal Pendaftaran Lengkap<span class="material-symbols-outlined text-[20px]">arrow_right_alt</span></a>
+</div>
+</div>
+<div class="flex-1 hidden lg:block">
+<div class="relative">
+<div class="absolute -inset-4 bg-primary-fixed-dim/30 rounded-2xl blur-2xl z-0"></div>
+<img alt="Students collaborating" class="relative z-10 w-full h-auto rounded-2xl shadow-2xl object-cover object-center aspect-[4/3] border-4 border-surface" data-alt="Group of diverse high school students smiling and collaborating around a laptop in a modern bright library, institutional editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDndoMx4w8ohRi_jqTk9upSIdYQVQIfeSGJ1j4EG_C2wDX_Y1clKRCsJycmRFdwha5jzZ6HzV3UTFTk5rGKNu7g0YBk4n0itki4P-tNWULmcXpBeWRwWyU7Q-dpg13u7MRucT_6hjNLV6Jdfm1PMPDZ3FDnJ3Z_dAHxzZIbImZH3bPTFueQw_FSIuwfYqEUbbYDlOZSvO9Ja94gd_CrEIkkJs52qflBGbP0_nvlhVgfHu22lqe0lZ_4I1lOqzq-X0oiWu7hcXhQ9FMa"/>
+<!-- Floating Stat Card -->
+<div class="absolute -bottom-8 -left-8 bg-surface-container-lowest p-6 rounded-xl soft-shadow z-20 flex items-center gap-4">
+<div class="bg-surface-container-low p-3 rounded-lg text-primary">
+<span class="material-symbols-outlined text-[32px]">emoji_events</span>
+</div>
+<div>
+<p class="font-headline font-extrabold text-2xl text-on-surface">50+</p>
+<p class="font-body text-sm text-on-surface-variant">Penghargaan Nasional</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-<footer>
-  <p>© Dino 2026</p>
+<!-- Highlights Section (Bento Grid) -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8 w-full">
+<div class="text-center max-w-2xl mx-auto mb-20">
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface tracking-tight mb-6">Pilar Pendidikan SMAN 1 DINO</h2>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed">Fokus kami pada pengembangan holistik memastikan setiap siswa memiliki kesempatan untuk berkembang sesuai dengan potensi maksimal mereka.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1: Fasilitas -->
+<div class="bg-surface-container-lowest rounded-2xl p-8 soft-shadow hover:-translate-y-2 transition-transform duration-300 flex flex-col group relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-fixed-dim/20 rounded-bl-full -z-0 transition-transform group-hover:scale-150 duration-500"></div>
+<div class="relative z-10 mb-8 w-14 h-14 bg-surface-container-low flex items-center justify-center rounded-xl text-primary">
+<span class="material-symbols-outlined text-[32px]">domain</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-4">Fasilitas Modern</h3>
+<p class="font-body text-on-surface-variant leading-relaxed flex-grow">Lingkungan belajar yang dilengkapi dengan teknologi terkini, laboratorium sains mutakhir, dan ruang kelas interaktif untuk mendukung proses akademik.</p>
+<a class="inline-flex items-center gap-2 mt-8 font-body font-semibold text-secondary hover:text-primary transition-colors" href="#">
+                            Jelajahi Fasilitas
+                            <span class="material-symbols-outlined text-[18px]">east</span>
+</a>
+</div>
+<!-- Card 2: Prestasi -->
+<div class="bg-surface-container-lowest rounded-2xl p-8 soft-shadow hover:-translate-y-2 transition-transform duration-300 flex flex-col group relative overflow-hidden md:-translate-y-8">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-fixed-dim/20 rounded-bl-full -z-0 transition-transform group-hover:scale-150 duration-500"></div>
+<div class="relative z-10 mb-8 w-14 h-14 bg-surface-container-low flex items-center justify-center rounded-xl text-secondary">
+<span class="material-symbols-outlined text-[32px]">military_tech</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-4">Budaya Prestasi</h3>
+<p class="font-body text-on-surface-variant leading-relaxed flex-grow">Tradisi keunggulan akademik dan non-akademik, membina para juara dalam kompetisi sains, seni, olahraga, hingga kepemimpinan tingkat nasional.</p>
+<a class="inline-flex items-center gap-2 mt-8 font-body font-semibold text-secondary hover:text-primary transition-colors" href="#">
+                            Lihat Prestasi
+                            <span class="material-symbols-outlined text-[18px]">east</span>
+</a>
+</div>
+<!-- Card 3: Kegiatan -->
+<div class="bg-surface-container-lowest rounded-2xl p-8 soft-shadow hover:-translate-y-2 transition-transform duration-300 flex flex-col group relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-tertiary-fixed-dim/20 rounded-bl-full -z-0 transition-transform group-hover:scale-150 duration-500"></div>
+<div class="relative z-10 mb-8 w-14 h-14 bg-surface-container-low flex items-center justify-center rounded-xl text-tertiary">
+<span class="material-symbols-outlined text-[32px]">groups</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-4">Kegiatan Dinamis</h3>
+<p class="font-body text-on-surface-variant leading-relaxed flex-grow">Ekstrakurikuler yang beragam dan program pengembangan karakter untuk melatih kepemimpinan, kreativitas, dan kerja sama tim yang solid.</p>
+<a class="inline-flex items-center gap-2 mt-8 font-body font-semibold text-secondary hover:text-primary transition-colors" href="#">
+                            Program Kegiatan
+                            <span class="material-symbols-outlined text-[18px]">east</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low full-width py-16 mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-2">
+<a class="font-manrope font-bold text-2xl text-primary mb-6 block tracking-tight" href="#">
+                    SMAN 1 DINO
+                </a>
+<p class="font-body text-sm leading-relaxed text-on-surface-variant max-w-md mb-8">
+                    Membentuk generasi penerus bangsa yang berintegritas, cerdas, dan inovatif melalui pendekatan pendidikan yang holistik dan relevan dengan tantangan masa depan.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 bg-surface-container-highest rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="w-10 h-10 bg-surface-container-highest rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface mb-6">Tautan Akademik</h4>
+<ul class="space-y-4">
+<li><a class="font-body text-sm text-on-surface-variant hover:text-primary hover:underline hover:underline-offset-4 transition-all" href="#">Alumni</a></li>
+<li><a class="font-body text-sm text-on-surface-variant hover:text-primary hover:underline hover:underline-offset-4 transition-all" href="#">Kurikulum</a></li>
+<li><a class="font-body text-sm text-on-surface-variant hover:text-primary hover:underline hover:underline-offset-4 transition-all" href="#">Penerimaan</a></li>
+<li><a class="font-body text-sm text-on-surface-variant hover:text-primary hover:underline hover:underline-offset-4 transition-all" href="#">E-Learning</a></li>
+<li><a class="font-body text-sm text-on-surface-variant hover:text-primary hover:underline hover:underline-offset-4 transition-all" href="#">Perpustakaan</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface mb-6">Kontak Kami</h4>
+<address class="not-italic space-y-4">
+<p class="font-body text-sm text-on-surface-variant flex items-start gap-3">
+<span class="material-symbols-outlined text-[18px] mt-0.5 text-primary">location_on</span>
+                        Jl. Pendidikan No. 1, Kota Dino,<br/>Provinsi Maju 12345
+                    </p>
+<p class="font-body text-sm text-on-surface-variant flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-primary">call</span>
+                        (021) 555-0123
+                    </p>
+<p class="font-body text-sm text-on-surface-variant flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-primary">email</span>
+                        info@sman1dino.sch.id
+                    </p>
+</address>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-surface-variant">
+<p class="font-inter text-sm text-on-surface-variant text-center">
+                © 2024 SMAN 1 DINO. Developed with Institutional Editorial standards.
+            </p>
+</div>
 </footer>
-
-<script src="dinokk.js"></script>
-</body>
-</html>
+</body></html>
